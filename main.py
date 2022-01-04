@@ -32,7 +32,7 @@ scrolled = False
 bought_c = False
 bought_m = False
 
-print("Running in {start_timer}...")
+print(f"Running in {start_timer}...")
 wait(start_timer)
 # hold down q to end
 while not keyboard.is_pressed('q') or not (buy_covenants and buy_mystics):
