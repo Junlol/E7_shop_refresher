@@ -14,6 +14,7 @@ buy_covenants = True
 buy_mystics = True
 
 # item buy button x & y offset
+
 # adjust this to the click the buy button to the right of the item
 button_add_x = 800  # higher value = further right
 button_add_y = 20  # higher value = further down
@@ -31,8 +32,7 @@ scrolled = False
 bought_c = False
 bought_m = False
 
-print(f"Running in {start_timer}...")
-
+print("Running in {start_timer}...")
 wait(start_timer)
 # hold down q to end
 while not keyboard.is_pressed('q') or not (buy_covenants and buy_mystics):
@@ -40,9 +40,7 @@ while not keyboard.is_pressed('q') or not (buy_covenants and buy_mystics):
     in_shop = pyautogui.locateCenterOnScreen(os.path.join(images_folder, "shop.png"), confidence=.90)
 
     if in_shop:
-        # delay
         
-
         # mystic bookmarks
         mystic = pyautogui.locateCenterOnScreen(os.path.join(images_folder, "mystic_icon.png"), confidence=.90)
 
