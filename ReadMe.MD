@@ -4,3 +4,6 @@ A rewrite of the script done originally by [EmaOlay](https://github.com/EmaOlay/
 - run main.py in admin
 - Works fine on my screen (1080p) with the emulator maximized but may need some tinkering to get it to work on others.
 - Taking new screenshots of the buttons on whatever screen resolutions you're using and setting the x & y offset of the item buy button should fix any problems.
+
+
+- I might try in the future (whenever I'm free) to connect directly to adb to prevent any problems.
