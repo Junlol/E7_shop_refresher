@@ -4,7 +4,7 @@ A rewrite of the script done originally by [EmaOlay](https://github.com/EmaOlay/
 ### Requirements
 - requires python 3
 - pip install -r requirements.txt
-- run main.py in admin
+- run main.py
 
 
 Works fine on my screen (1080p) with the emulator maximized but may need some tinkering to get it to work on others.
