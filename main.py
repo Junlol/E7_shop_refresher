@@ -144,4 +144,4 @@ while not keyboard.is_pressed('q') or not (buy_covenants and buy_mystics):
 if c > 0 or m > 0:
     print(f"Covenants found {c * 5}\nMystics found {m * 50}")
 
-# input("Press Enter to continue...")
+input("Press Enter to continue...")
