@@ -26,7 +26,7 @@ c = 0
 m = 0
 
 # flags
-searching = True
+
 scrolled = False
 bought_c = False
 bought_m = False
@@ -114,31 +114,26 @@ while not keyboard.is_pressed('q') or not (buy_covenants and buy_mystics):
             # search again after scroll
             continue
 
-        # quit searching
-        searching = False
+        # refresh
+        print("Refreshing...")
 
-        # refresh the shop
-        if not searching:
-            # print("Refreshing...")
+        # click refresh button
+        wait(0.5)
+        pyautogui.click(refresh_button, button='left', clicks=2)
+        wait(1)
 
-            # click refresh button
-            wait(0.5)
-            pyautogui.click(refresh_button, button='left', clicks=2)
-            wait(1)
+        # find and click refresh confirm button
+        refresh_button_confirm = pyautogui.locateCenterOnScreen(
+            os.path.join(images_folder, "confirm_refresh_button.png"),
+            confidence=.90)
+        pyautogui.click(refresh_button_confirm, button='left')
 
-            # find and click refresh confirm button
-            refresh_button_confirm = pyautogui.locateCenterOnScreen(
-                os.path.join(images_folder, "confirm_refresh_button.png"),
-                confidence=.90)
-            pyautogui.click(refresh_button_confirm, button='left')
+        wait(1)
 
-            wait(1)
-
-            # reset flags
-            searching = True
-            scrolled = False
-            bought_m = False
-            bought_c = False
+        # reset flags
+        scrolled = False
+        bought_m = False
+        bought_c = False
 
     # break if not in shop
     else:
@@ -148,3 +143,5 @@ while not keyboard.is_pressed('q') or not (buy_covenants and buy_mystics):
 # print when loop ends
 if c > 0 or m > 0:
     print(f"Covenants found {c * 5}\nMystics found {m * 50}")
+
+# input("Press Enter to continue...")
